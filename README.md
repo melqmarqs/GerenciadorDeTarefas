@@ -16,3 +16,5 @@ Para rodar o frontend:
 Ao abrir o projeto frontend, voce pode rodar o comando npm i no terminal, para garantir que todas as depencias serao instaladas e depois voce pode inicializar a aplicacao (comando ng serve ou npm start)
 
 A aplicação deve inicializar na porta 4200 (http://localhost:4200/)
+
+video da aplicacao funcionando: https://drive.google.com/file/d/1iAf8RvIQEGOzeplJO1SlwdF7nJlZwM_H/view?usp=sharing
