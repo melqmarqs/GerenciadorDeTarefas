@@ -1,7 +1,6 @@
 ﻿using Domain.Enums;
 using Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace Infrastructure
 {
@@ -20,8 +19,8 @@ namespace Infrastructure
                 entity.Property(e => e.Titulo).HasMaxLength(70).IsRequired();
                 entity.Property(e => e.Descricao).HasMaxLength(200).IsRequired();
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
-                entity.Property(e => e.Prioridade).HasConversion<int>().HasDefaultValue(Prioridade.Media);
-                entity.Property(e => e.Status).HasConversion<int>().HasDefaultValue(Status.Em_Andamento);
+                entity.Property(e => e.Prioridade).HasConversion<int>();
+                entity.Property(e => e.Status).HasConversion<int>();
             });
         }
     }
