@@ -18,3 +18,5 @@ Ao abrir o projeto frontend, voce pode rodar o comando npm i no terminal, para g
 A aplicação deve inicializar na porta 4200 (http://localhost:4200/)
 
 video da aplicacao funcionando: https://drive.google.com/file/d/1iAf8RvIQEGOzeplJO1SlwdF7nJlZwM_H/view?usp=sharing
+
+O SCRIPT DE CRICAO DA TABELA ESTA NA RAIZ DO PROJETO.
