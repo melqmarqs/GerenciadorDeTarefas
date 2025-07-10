@@ -1,0 +1,63 @@
+<div class="container">
+  <button type="button" (click)="toggleCollapse()" class="btn btn-primary bg-gradient">
+    {{ !isCollapsed ? 'Novo' : 'Cancelar' }}
+  </button>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <td>Título</td>
+          <td>Descrição</td>
+          <td>Prioridade</td>
+          <td>Status</td>
+          <td [hidden]="isCollapsed">Criado Em</td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr [hidden]="isCollapsed" *ngFor="let tarefa of tarefas$ | async" (click)="getTarefa(tarefa.id)">
+          <td>{{tarefa.titulo}}</td>
+          <td>{{tarefa.descricao}}</td>
+          <td>{{this.helper.usePrioridade(tarefa.prioridade)}}</td>
+          <td>{{this.helper.useStatus(tarefa.status)}}</td>
+          <td>{{tarefa.dataDeCriacao}}</td>
+          <td>
+            <i class="bi bi-pencil-square" (click)="editar(tarefa.id)"></i>
+            <i class="bi bi-trash3" (click)="deletar(tarefa.id)"></i>
+          </td>
+        </tr>
+
+        <tr [hidden]="!isCollapsed">
+          <td>
+            <input type="text" placeholder="fazer o almoço" [(ngModel)]="titulo" name="titulo">
+          </td>
+          <td>
+            <input type="text" placeholder="verificar o cardapio" [(ngModel)]="descricao" name="descricao">
+          </td>
+          <td>
+            <select name="selectPrioridade" id="selectPrioridade" [(ngModel)]="prioridade">
+              <option *ngFor="let p of this.prioridadeEnum" [value]="p">
+                {{this.helper.usePrioridade(+p)}}
+              </option>
+            </select>
+          </td>
+          <td>
+            <select name="selectStatus" id="selectStatus" [(ngModel)]="status">
+              <option *ngFor="let p of this.statusEnum" [value]="p">
+                {{this.helper.useStatus(+p)}}
+              </option>
+            </select>
+          </td>
+          <td>
+            <button (click)="salvarTarefa()" class="btn btn-success">
+              Salvar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>

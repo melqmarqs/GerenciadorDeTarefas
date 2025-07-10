@@ -35,6 +35,7 @@ namespace Infrastructure.Repositories
         {
             var dbTarefas = await _context.Tarefas
                 .Where(t => t.IsDeleted == false)
+                .OrderBy(t => t.Id)
                 .ToListAsync();
 
             return dbTarefas.Select(MapToTarefa);

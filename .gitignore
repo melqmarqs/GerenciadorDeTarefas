@@ -58,3 +58,6 @@ nunit-*.xml
 *.suo
 *.userosscache
 *.sln.docstates
+
+frontend/.vscode
+frontend/.editorconfig

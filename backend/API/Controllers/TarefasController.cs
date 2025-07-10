@@ -38,7 +38,7 @@ namespace API.Controllers
                 dto.Descricao,
                 dto.Prioridade,
                 dto.Status,
-                dto.DataDeCriacao);
+                DateOnly.Parse(DateTime.Now.ToString("yyyy-MM-dd")));
 
             return CreatedAtAction(nameof(GetAll), new { id = tarefa.Id }, tarefa);
         }

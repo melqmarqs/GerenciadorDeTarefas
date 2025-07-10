@@ -6,7 +6,6 @@ namespace API.Models
         string Titulo,
         string Descricao,
         Prioridade Prioridade,
-        Status Status,
-        DateOnly DataDeCriacao
+        Status Status
     );
 }

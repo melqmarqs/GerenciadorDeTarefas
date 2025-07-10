@@ -1,0 +1,34 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+.container {
+    font-family: 'DM Sans', Arial;
+
+    button {
+        border-radius: 5px;
+    }
+
+    .table thead tr td {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .table tbody tr {
+        cursor: pointer;
+        vertical-align: middle;
+
+        .bi-pencil-square {
+            margin-right: 5px;
+        }
+    }
+}
+
+form {
+    //background-color: brown;
+
+    input {
+        border-radius: 3px;
+        border-width: 0;
+        padding: 5px 8px;
+    }
+}
